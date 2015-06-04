@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<RelativeLayout
+        android:id="@+id/login_div"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="30dip"
+        android:layout_marginRight="15dip"
+        android:background="@drawable/background_login_div"
+        android:padding="15dip" >
+
+        <TextView
+            android:id="@+id/title"
+            android:textSize = "14sp"
+            android:textColor="#444"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="主题" />
+
+        <EditText
+            android:id="@+id/name"
+            android:textSize = "14sp"
+            android:textColor="#444"
+            android:layout_width="fill_parent"
+            android:numeric="integer"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:hint="输入描述信息"
+            android:inputType="number"
+            android:paddingLeft="5px"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/login_password_input"
+            android:textSize = "14sp"
+            android:textColor="#444"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginTop="3dp"
+            android:text="照片" />
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/submit"
+            android:layout_alignLeft="@+id/login_password_input"
+            android:layout_alignRight="@+id/name"
+            android:layout_below="@+id/login_password_input"
+            android:background="@drawable/background_login_div"
+            android:padding="15dip" >
+
+         <ImageView
+             android:id="@+id/img1"
+             android:layout_width="250dip"
+             android:layout_height="250dip"
+             android:src = "@drawable/imgadd"
+             android:padding="15dip" />
+         <ImageView
+             android:id="@+id/img2"
+             android:layout_width="100dip"
+             android:layout_height="100dip"
+             android:layout_toRightOf="@id/img1"
+             android:layout_marginLeft="20dip"
+             android:padding="15dip" 
+             android:visibility="gone"
+             />
+         <ImageView
+             android:id="@+id/img3"
+             android:layout_width="100dip"
+             android:layout_height="100dip"
+             android:layout_below="@id/img1"
+             android:layout_marginTop="20dip"
+             android:padding="15dip"
+             android:visibility="gone" />
+         <ImageView
+             android:id="@+id/img4"
+             android:layout_width="100dip"
+             android:layout_height="100dip"
+             android:layout_toRightOf="@id/img3"
+             android:layout_below="@id/img2"
+             android:layout_marginLeft="20dip"
+             android:layout_marginTop="20dip"
+             android:padding="15dip"
+             android:visibility="gone" />
+           
+            </RelativeLayout>
+
+        <Button
+            android:id="@+id/submit"
+            style="@drawable/shape"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/top_blue"
+            android:text="提交所有" />
+
+    </RelativeLayout>
+    
+</RelativeLayout>
